@@ -1,0 +1,34 @@
+"SOPAS":
+  - name: SOPA CHINA
+    description: Tradicional sopa con camaron, pollo, verduras y fideos chinos
+    price: 80
+  - name: SOPA DE MARISCOS
+    description: Caldo sabroso con camarones, pescado,  verduras frescas y fideos de arroz
+    price: 120
+  - name: SOPA DE POLLO
+    description: Sopa ligera con pollo, verduras frescas y fideos de arroz
+    price: 90
+  - name: SOPA DE ALETA DE TIBURON
+    description: Especialidad clásica con aleta de tiburón 
+    price: 250
+  - name: SOPA DE ABULON
+    description: Delicada sopa con abulón 
+    price: 280
+
+"ARROZ":
+  - name: ARROZ FRITO CON CANTONES
+    description: Arroz salteado al estilo cantonés con camaron, puerco y cebollita picada
+    price: 100
+    image: /assets/img/menu/arroz/arroz_cant.jpeg
+  - name: ARROZ FRITO CON CAMARON
+    description: Arroz frito con camarones y cebollita picada
+    price: 120
+  - name: ARROZ FRITO CON POLLO
+    description: Arroz frito con trozos de pollo y cebollita picada
+    price: 110
+  - name: ARROZ FRITO CON PUERCO
+    description: Arroz frito con carne de cerdo y cebollita picada
+    price: 115
+  - name: ARROZ FRITO CON RES
+    description: Arroz frito con res y cebollita picada
+    price: 130
