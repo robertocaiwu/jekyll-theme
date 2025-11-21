@@ -18,7 +18,7 @@ Además, aquí encontrarás la información sobre nuestro restaurante:
 
 - 📞 **Teléfono:** [6622152908](tel:6622152908)    
 - 📍 **Dirección:** [Justo Sierra 10, Issste Federal, 83150 Hermosillo, Sonora, Mexico](https://maps.app.goo.gl/rtBJGhmMqPCpkNy37)
-- 🌐 **Redes sociales:** Síguenos en [Facebook](https://facebook.com/tu-pagina) para noticias, promociones y eventos.
+- 🌐 **Redes sociales:** Síguenos en [Facebook](https://www.facebook.com/ChoyLiYuan) para noticias, promociones y eventos.
 
 ## Explora
 

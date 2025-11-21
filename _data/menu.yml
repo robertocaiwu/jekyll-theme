@@ -2,19 +2,19 @@
   - name: ARROZ FRITO CON CANTONES
     description: Arroz salteado al estilo cantonés con camarón, puerco y cebollín.
     price: 110
-    image: /assets/img/menu/arroz/arroz_cant.jpeg
+    # image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON CAMARON
     description: Arroz frito con camarones y cebollín.
     price: 170
-    image: /assets/img/menu/arroz/arroz_cant.jpeg
+    # image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON POLLO
     description: Arroz frito con trozos de pollo y cebollín.
     price: 105
-    image: /assets/img/menu/arroz/arroz_cant.jpeg
+    # image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON PUERCO
     description: Arroz frito con carne de cerdo y cebollín.
     price: 105
-    image: /assets/img/menu/arroz/arroz_cant.jpeg
+    # image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON RES
     description: Arroz frito con res y cebollín.
     price: 115

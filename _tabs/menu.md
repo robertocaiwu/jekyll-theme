@@ -3,7 +3,7 @@ layout: menu
 icon: fas fa-bowl-food
 order: 3
 ---
-
+<!-- <i class="fa-solid fa-rectangle-list"></i> [Ir a Paquetes](/paquetes/) -->
 <h2>Nuestro Menu</h2>
 
 {% assign categorias = site.data.menu %}

@@ -3,9 +3,8 @@ layout: paquetes
 icon: fas fa-rectangle-list
 order: 2
 ---
-
+<!-- <i class="fa-solid fa-bowl-food"></i> [Ir a Menú](/menu/) -->
 # Paquetes familiares
-
 
 {% assign paquetes = site.data.paquetes %}
 <div class="package-category">

@@ -1,10 +1,53 @@
+/* 1. Default (light) theme variables */
+:root {
+  --menu-bg-odd: #f9f9f9;
+  --menu-bg-even: #fff;
+  --menu-text: #000;
+  --menu-title: #ff6600;
+  --menu-desc: #555;
+  --menu-price: #ff6600;
+}
+
+/* 2. Automatic dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --menu-bg-odd: #2a2a2a;
+    --menu-bg-even: #1c1c1c;
+    --menu-text: #eee;
+    --menu-title: #fff;
+    --menu-desc: #ccc;
+    --menu-price: #ffb347;
+  }
+}
+
+/* 3. Manual dark mode toggle (wins if attribute is present) */
+html[data-mode="dark"] {
+  --menu-bg-odd: #2a2a2a;
+  --menu-bg-even: #1c1c1c;
+  --menu-text: #eee;
+  --menu-title: #fff;
+  --menu-desc: #ccc;
+  --menu-price: #ffb347;
+}
+
+/* 4. Manual light mode toggle (forces light even if system is dark) */
+html[data-mode="light"] {
+  --menu-bg-odd: #f9f9f9;
+  --menu-bg-even: #fff;
+  --menu-text: #000;
+  --menu-title: #ff6600;
+  --menu-desc: #555;
+  --menu-price: #ff6600;
+}
+
+/* 5. Use variables everywhere */
 .menu-category {
   margin-bottom: 2rem;
 }
 
 .menu-category h3 {
-  color: #ff6600; 
-  border-bottom: 2px solid #ff6600;
+  color: var(--menu-title);
+  border-bottom: 2px solid var(--menu-title);
   padding-bottom: 0.5rem;
 }
 
@@ -20,37 +63,23 @@
   align-items: flex-start;
   margin: 0.5rem 0;
   gap: 1rem;
+  color: var(--menu-text);
 }
 
-/* Default (light mode) alternating rows */
+/* Alternating rows */
 .menu-category ul li.menu-item:nth-child(odd) {
-  background-color: #f9f9f9;   /* subtle light gray */
+  background-color: var(--menu-bg-odd);
 }
 .menu-category ul li.menu-item:nth-child(even) {
-  background-color: #fff;      /* plain white */
+  background-color: var(--menu-bg-even);
 }
-
-/* Dark mode overrides */
-html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(odd) {
-  background-color: #2a2a2a;   /* dark gray highlight */
-}
-html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(even) {
-  background-color: #1c1c1c;   /* slightly darker base */
-}
-
-html[data-mode="dark"] .menu-item .dish-name,
-html[data-mode="dark"] .menu-item .dish-description,
-html[data-mode="dark"] .menu-item .dish-price {
-  color: #eee;                 /* lighter text for readability */
-}
-
 
 .lightbox {
-  display: none;              /* hidden by default */
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8); /* dark overlay */
+  background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -80,23 +109,25 @@ html[data-mode="dark"] .menu-item .dish-price {
   }
 
   .dish-name {
-    order: 2;               /* first in row */
+    order: 2;
     font-weight: bold;
-    flex: 1 0 15%;          /* reserve up to 15% of row width */
-    max-width: 30%;         /* enforce maximum width */
-    overflow: auto;       /* hide overflow text */
+    flex: 1 0 15%;
+    max-width: 30%;
+    overflow: auto;
+    color: var(--menu-title);
   }
 
   .dish-description {
-    order: 3;              /* second */
-    flex: 1;               /* take available space */
+    order: 3;
+    flex: 1;
     margin: 0 1rem;
     word-wrap: break-word;
+    color: var(--menu-desc);
   }
 
   .dish-price {
-    order: 4;              /* third */
-    color: #ff6600;
+    order: 4;
+    color: var(--menu-price);
     font-weight: bold;
     flex: 0 0 auto;
     text-align: right;
@@ -104,7 +135,7 @@ html[data-mode="dark"] .menu-item .dish-price {
   }
 
   .dish-image {
-    order: 1;              /* last */
+    order: 1;
     display: block;
     position: static;
     width: 60px;
@@ -113,17 +144,16 @@ html[data-mode="dark"] .menu-item .dish-price {
     border-radius: 6px;
     margin-right: 0.5rem;
     box-shadow: none;
-    align-self: flex-start; /* align top with row */
+    align-self: flex-start;
   }
 }
-
 
 /* Mobile layout */
 @media (max-width: 768px) {
   .menu-item {
     display: grid;
-    grid-template-columns: 1fr auto;   /* left column text, right column image */
-    grid-template-rows: auto auto auto; /* 3 rows for text */
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
     align-items: start;
     gap: 0.3rem 1rem;
   }
@@ -133,13 +163,14 @@ html[data-mode="dark"] .menu-item .dish-price {
     grid-row: 1;
     font-weight: bold;
     margin-bottom: 0.2rem;
+    color: var(--menu-title);
   }
 
   .dish-price {
     grid-column: 1;
     grid-row: 2;
-    justify-self: start;              /* force price to align left */
-    color: #ff6600;
+    justify-self: start;
+    color: var(--menu-price);
     font-weight: bold;
     margin-bottom: 0.2rem;
   }
@@ -148,26 +179,24 @@ html[data-mode="dark"] .menu-item .dish-price {
     grid-column: 1;
     grid-row: 3;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--menu-desc);
   }
 
-.dish-image {
+  .dish-image {
     grid-column: 2;
-    grid-row: 1 / span 3;             /* span all three rows */
+    grid-row: 1 / span 3;
     display: block !important;
     position: static !important;
-    transform: none !important;        /* cancel desktop centering */
+    transform: none !important;
     top: auto !important;
     left: auto !important;
-
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 6px;
     margin-left: 0.5rem;
     box-shadow: none;
-
-    align-self: start;                 /* align top with dish name */
+    align-self: start;
     justify-self: center;
   }
 }
