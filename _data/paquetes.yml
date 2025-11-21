@@ -1,0 +1,78 @@
+
+- name: "PAQUETE A"
+  dishes:
+    - ARROZ FRITO CON PUERCO
+    - CHOP SUEY DE PUERCO
+    - ENROLLADO
+  description: "Paquete por persona"
+  price: 105 MXN
+
+
+- name: "PAQUETE B"
+  dishes:
+    - CARNITAR ROJAS
+    - ARROZ FRITO CON PUERCO
+    - CHOP SUEY DE PUERCO
+    - COMBINACION CHINA
+  description: "Paquete por persona"
+  price: 115 MXN
+
+- name: "PAQUETE #1"
+  dishes:
+    - CARNITAR ROJAS
+    - ARROZ FRITO CON PUERCO
+    - CHOP SUEY DE PUERCO
+    - ENROLLADO
+    - POLLO FRITO
+    - COSTILLAS CON AGRIDULCE
+  description: "Paquete por persona"
+  price: 130 MXN
+
+- name: "PAQUETE #2"
+  dishes:
+    - CARNITAR ROJAS
+    - ARROZ FRITO CON PUERCO
+    - CHOP SUEY DE PUERCO
+    - ENROLLADO
+    - COMBINACION CHINA
+    - COSTILLAS CON AGRIDULCE
+  description: "Paquete por persona"
+  price: 140 MXN
+
+- name: "PAQUETE #3"
+  dishes:
+    - CARNITAR ROJAS
+    - ARROZ FRITO CANTONES
+    - CHOP SUEY ESPECIAL
+    - ENROLLADO
+    - COMBINACION CHINA
+    - BROCOLI CON RES
+    - COSTILLAS CON AGRIDULCE
+  description: "Paquete por persona"
+  price: 160 MXN
+
+- name: "PAQUETE #4"
+  dishes:
+    - SOPA DE MARISCOS
+    - ARROZ FRITO CON CAMARON
+    - CHOP SUEY DE MARISCOS
+    - COMBINACION DE VERDURAS
+    - CAMARON EMPANIZADO
+    - CAMARON A LA PLANCHA
+    - CAMARONES CON AGRIDULCE
+  description: "Paquete por persona"
+  extra: "Minimo dos ordenes"
+  price: 270 MXN
+
+- name: "PAQUETE #5"
+  dishes:
+    - SOPA DE MARISCOS
+    - ARROZ FRITO CON CAMARON
+    - CHOP SUEY DE MARISCOS
+    - PESCADO EN SALSA CHINA
+    - CALLO DE HACHA ALMENDRADO
+    - CAMARON EMPANIZADO
+    - CAMARON A LA PLANCHA
+  description: "Paquete por persona"
+  extra: "Minimo dos ordenes"
+  price: 310 MXN

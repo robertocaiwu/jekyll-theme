@@ -1,34 +1,234 @@
-"SOPAS":
-  - name: SOPA CHINA
-    description: Tradicional sopa con camaron, pollo, verduras y fideos chinos
-    price: 80
-  - name: SOPA DE MARISCOS
-    description: Caldo sabroso con camarones, pescado,  verduras frescas y fideos de arroz
-    price: 120
-  - name: SOPA DE POLLO
-    description: Sopa ligera con pollo, verduras frescas y fideos de arroz
-    price: 90
-  - name: SOPA DE ALETA DE TIBURON
-    description: Especialidad clásica con aleta de tiburón 
-    price: 250
-  - name: SOPA DE ABULON
-    description: Delicada sopa con abulón 
-    price: 280
-
 "ARROZ":
   - name: ARROZ FRITO CON CANTONES
-    description: Arroz salteado al estilo cantonés con camaron, puerco y cebollita picada
-    price: 100
+    description: Arroz salteado al estilo cantonés con camarón, puerco y cebollín.
+    price: 110
     image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON CAMARON
-    description: Arroz frito con camarones y cebollita picada
-    price: 120
+    description: Arroz frito con camarones y cebollín.
+    price: 170
+    image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON POLLO
-    description: Arroz frito con trozos de pollo y cebollita picada
-    price: 110
+    description: Arroz frito con trozos de pollo y cebollín.
+    price: 105
+    image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON PUERCO
-    description: Arroz frito con carne de cerdo y cebollita picada
-    price: 115
+    description: Arroz frito con carne de cerdo y cebollín.
+    price: 105
+    image: /assets/img/menu/arroz/arroz_cant.jpeg
   - name: ARROZ FRITO CON RES
-    description: Arroz frito con res y cebollita picada
+    description: Arroz frito con res y cebollín.
+    price: 115
+
+"SOPAS":
+  - name: SOPA CHINA
+    description: Tradicional sopa con camarón, pollo, verduras y fideos chinos.
+    price: 110
+  - name: SOPA DE MARISCOS
+    description: Caldo sabroso con camarones, pescado, verduras frescas y fideos de arroz.
+    price: 110
+  - name: SOPA DE POLLO
+    description: Sopa ligera con pollo, verduras frescas y fideos de arroz.
+    price: 100
+  - name: SOPA DE ALETA DE TIBURON
+    description: Especialidad clásica con aleta de tiburón.
+    price: 120
+  - name: SOPA DE ABULON
+    description: Delicada sopa con abulón.
+    price: 2000
+
+"CHOP SUEY":
+  - name: CHOP SUEY DE CAMARON
+    price: 170
+    description: Camarones salteados con verduras frescas en salsa oriental.
+  - name: CHOP SUEY DE PUERCO
+    price: 110
+    description: Carne de cerdo con verduras mixtas y salsa de ostión.
+  - name: CHOP SUEY DE POLLO
+    price: 110
+    description: Pollo troceado con verduras crujientes en salsa ligera.
+  - name: CHOP SUEY DE RES
+    price: 120
+    description: Res en tiras con verduras frescas y salsa de soya.
+  - name: CHOP SUEY DE MARISCOS
+    price: 120
+    description: Mezcla de mariscos con verduras en salsa especial.
+  - name: CHOP SUEY ESPECIAL
+    price: 120
+    description: Combinación de carnes y mariscos con verduras al wok.
+  - name: COMBINACION DE VERDURAS
+    price: 95
+    description: Selección de verduras frescas salteadas al estilo chino.
+  - name: ELOTITO CON SALSA DE OSTION
+    price: 180
+    description: Elotes tiernos bañados en salsa de ostión.
+  - name: CHOUMEN ESPECIAL
+    price: 125
+    description: Fideos chinos con carne, mariscos y verduras.
+  - name: EJOTE BORRACHO
+    price: 120
+    description: Ejotes salteados con salsa picante y especias.
+
+"AGRIDULCE":
+  - name: COSTILLAS DE AGRIDULCE
+    price: 100
+    description: Costillas de cerdo en salsa agridulce tradicional.
+  - name: CAMARON AGRIDULCE
+    price: 190
+    description: Camarones fritos bañados en salsa agridulce.
+  - name: POLLO DESHUESADO AGRIDULCE
+    price: 110
+    description: Pollo sin hueso en salsa agridulce con piña.
+  - name: PESCADO AGRIDULCE
     price: 130
+    description: Filete de pescado frito con salsa agridulce.
+
+"MARISCOS":
+  - name: CAMARON CANTONES
+    price: 190
+    description: Camarones con verduras y salsa cantonesa.
+  - name: CAMARON CON BROCOLI
+    price: 190
+    description: Camarones salteados con brócoli fresco.
+  - name: CAMARON SALSA DE LANGOSTA
+    price: 230
+    description: Camarones bañados en salsa de langosta.
+  - name: CAMARON EMPANIZADO
+    price: 190
+    description: Camarones empanizados crujientes con salsa tártara.
+  - name: CAMARON A LA PLANCHA
+    price: 230
+    description: Camarones dorados a la plancha con especias.
+  - name: CAMARON CON LECHE
+    price: 230
+    description: Camarones en salsa cremosa de leche.
+  - name: CAMARON PICANTE
+    price: 230
+    description: Camarones en salsa picante estilo oriental.
+  - name: CAMARON RANCHERO
+    price: 230
+    description: Camarones en salsa ranchera mexicana.
+  - name: COCTEL DE CAMARON
+    price: 190
+    description: Camarones frescos en salsa de tomate y limón.
+  - name: COCTEL DE ABULON
+    price: 2000
+    description: Abulón fresco en salsa estilo cóctel.
+  - name: ABULÓN CON SALSA DE OSTIÓN
+    price: 2000
+    description: Abulón en salsa de ostión con verduras.
+  - name: COMBINACIÓN DE MARISCOS
+    price: 130
+    description: Mezcla de mariscos frescos en salsa especial.
+  - name: PESCADO EMPANIZADO
+    price: 185
+    description: Filete de pescado empanizado crujiente.
+  - name: PESCADO FRITO
+    price: 185
+    description: Filete de pescado frito.
+  - name: PESCADO CON SALSA CHINA
+    price: 185
+    description: Pescado frito en salsa china.
+  - name: PESCADO ENTERO
+    price: kg.
+    description: Pescado preparado a tu gusto.
+
+"PLATILLO ESPECIAL ESTILO MANDARIN":
+  - name: POLLO CON CARL
+    price: 175
+    description: Pollo con verduras preparado con salsa cari.
+  - name: POLLO FRITO
+    price: 130
+    description: Pollo frito crujiente.
+  - name: POLLO ALMENDRADO
+    price: 130
+    description: Pollo con almendras y salsa ligera.
+  - name: POLLO DESHUESADO CON HONGOS 
+    price: 130
+    description: Pollo sin hueso con verduras y hongo shiitake.
+  - name: POLLO HUESADO EN SALSA DE OSTION
+    price: 175
+    description: Pollo huesado bañado en salsa de ostión.
+  - name: CARNITAS ROJAS
+    price: 145
+    description: Carnitas de cerdo asadas.
+  - name: PATO ASADO
+    price: 800
+    description: Pato asado al estilo Pekín.
+  - name: CHORIZO CHINO
+    price: 185
+    description: Chorizo chino de puerco frito.
+  - name: PERDIZ ASADO
+    price: 280
+    description: Perdiz asada con hierbas.
+  - name: PERDIZ ASADO CON HONGOS
+    price: 280
+    description: Perdiz asada con hongos shiitake.
+  - name: RES CON BROCOLI
+    price: 135
+    description: Res salteada con brócoli y salsa de soya.
+  - name: MONGORIA DE RES
+    price: 180
+    description: Res frita en salsa estilo mongol.
+  - name: FOOYONG
+    price: 130
+    description: Tortilla de huevo china con verduras y carne.
+  - name: HUEVO DE GODORNIZ
+    price: 180
+    description: Huevos de codorniz preparados al estilo oriental.
+  - name: ENROLLADOS
+    price: 85
+    description: Rollitos chinos rellenos de verduras y carne de puerco.
+  - name: COMBINACIÓN CHINA
+    price: 120
+    description: Verduras combinadas con carne de puerco, pollo y camarón.
+
+"PLATILLO ESPECIAL ESTILO CANTONES":
+  - name: CHOUMEN DE ESTRELLA
+    price: 175
+    description: Fideos chinos con carne y verduras.
+  - name: MONGORIA DE POLLO
+    price: 175
+    description: Cama de fritura con pollo en salsa estilo mongol.
+  - name: COSTILLA DE PRESIDENTES
+    price: 175
+    description: Costillas de cerdo en salsa especial.
+  - name: COSTILLA CON FRIJOL CHINO
+    price: 175
+    description: Costillas con frijol chino y especias.
+  - name: COSTILLA BORRACHA
+    price: 175
+    description: Costillas en salsa picante estilo borracho.
+  - name: POLLO LA NARANJA
+    price: 175
+    description: Pollo en salsa agridulce de naranja.
+  - name: POLLO BORRACHO
+    price: 175
+    description: Pollo en salsa picante estilo borracho.
+
+"BEBIDAS":
+  - name: SODA
+    price:
+    description: Refresco de sabores variados.
+  - name: TE HELADO
+    price:
+    description: Té negro frío con limón.
+  - name: TE CALIENTE
+    price:
+    description: Té verde o negro servido caliente.
+  - name: LIMONADA
+    price:
+    description: Bebida refrescante de limón natural.
+  - name: CERVEZA
+    price:
+    description: Cervezas nacionales.
+  - name: VINOS
+    price: "-"
+    description: ""
+
+"POSTRE":
+  - name: PAY DE QUESO
+    price:
+    description: Rebanada de pay de queso cremoso.
+  - name: FLAN
+    price:
+    description: Flan casero con caramelo.

@@ -3,7 +3,7 @@
 }
 
 .menu-category h3 {
-  color: #ff6600; /* Naranja */
+  color: #ff6600; 
   border-bottom: 2px solid #ff6600;
   padding-bottom: 0.5rem;
 }
@@ -22,44 +22,43 @@
   gap: 1rem;
 }
 
-.dish-image {
-  display: none; /* hidden by default */
-  position: fixed; /* fixed to viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* center horizontally & vertically */
-  max-width: 80%;
-  max-height: 80%;
-  z-index: 9999; /* in front of all text */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+/* Default (light mode) alternating rows */
+.menu-category ul li.menu-item:nth-child(odd) {
+  background-color: #f9f9f9;   /* subtle light gray */
+}
+.menu-category ul li.menu-item:nth-child(even) {
+  background-color: #fff;      /* plain white */
 }
 
-.menu-item:hover .dish-image {
-  display: block; /* show when hovering over the menu item */
+/* Dark mode overrides */
+/* html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(odd) {
+  background-color: #2a2a2a;  
+}
+html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(even) {
+  background-color: #1c1c1c;  
+} */
+
+/* html[data-mode="dark"] .menu-item .dish-name,
+html[data-mode="dark"] .menu-item .dish-description,
+html[data-mode="dark"] .menu-item .dish-price {
+  color: #eee;          
+} */
+
+@media (prefers-color-scheme: dark) {
+  .menu-category ul li.menu-item:nth-child(odd) {
+    background-color: #2a2a2a;
+  }
+  .menu-category ul li.menu-item:nth-child(even) {
+    background-color: #1c1c1c;
+  }
+
+  .menu-item .dish-name,
+  .menu-item .dish-description,
+  .menu-item .dish-price {
+    color: #eee;
+  }
 }
 
-.dish-name {
-  font-weight: bold;
-  flex: 0 0 auto;                   /* no se encoge */
-}
-
-.dish-description {
-  flex: 1;                          /* ocupa el espacio del medio */
-  margin: 0 1rem;
-  word-wrap: break-word;            /* se parte si es muy largo */
-}
-
-.dish-price {
-  color: #ff6600;
-  font-weight: bold;
-  flex: 0 0 auto;                   /* fijo al final */
-  text-align: right;
-}
-
-.dish-image {
-  display: none; /* hidden inline, only used for source */
-}
 
 .lightbox {
   display: none;              /* hidden by default */
@@ -85,4 +84,105 @@
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+}
+
+/* Desktop mode */
+@media (min-width: 769px) {
+  .menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dish-name {
+    order: 2;               /* first in row */
+    font-weight: bold;
+    flex: 1 0 15%;          /* reserve up to 15% of row width */
+    max-width: 30%;         /* enforce maximum width */
+    overflow: auto;       /* hide overflow text */
+  }
+
+  .dish-description {
+    order: 3;              /* second */
+    flex: 1;               /* take available space */
+    margin: 0 1rem;
+    word-wrap: break-word;
+  }
+
+  .dish-price {
+    order: 4;              /* third */
+    color: #ff6600;
+    font-weight: bold;
+    flex: 0 0 auto;
+    text-align: right;
+    margin-right: 0.5rem;
+  }
+
+  .dish-image {
+    order: 1;              /* last */
+    display: block;
+    position: static;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    box-shadow: none;
+    align-self: flex-start; /* align top with row */
+  }
+}
+
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;   /* left column text, right column image */
+    grid-template-rows: auto auto auto; /* 3 rows for text */
+    align-items: start;
+    gap: 0.3rem 1rem;
+  }
+
+  .dish-name {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+
+  .dish-price {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;              /* force price to align left */
+    color: #ff6600;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+
+  .dish-description {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+.dish-image {
+    grid-column: 2;
+    grid-row: 1 / span 3;             /* span all three rows */
+    display: block !important;
+    position: static !important;
+    transform: none !important;        /* cancel desktop centering */
+    top: auto !important;
+    left: auto !important;
+
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-left: 0.5rem;
+    box-shadow: none;
+
+    align-self: start;                 /* align top with dish name */
+    justify-self: center;
+  }
 }

@@ -13,12 +13,20 @@ order: 3
     <ul>
     {% for item in categoria[1] %}
         <li class="menu-item">
-        <span class="dish-name">{{ item.name }}</span>
-        <span class="dish-description">{{ item.description }}</span>
-        <span class="dish-price">${{ item.price }}</span>
-        {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.name }}" class="dish-image">
-        {% endif %}
+            <span class="dish-name">{{ item.name }}</span>
+            <span class="dish-description">{{ item.description }}</span>
+            
+            {% assign numeric_price = item.price | plus: 0 %}
+            <span class="dish-price">
+            {% if numeric_price > 0 %}
+                $
+            {% endif %}
+            {{ item.price }}
+            </span>
+
+            {% if item.image %}
+                <img src="{{ item.image | relative_url }}" alt="{{ item.name }}" class="dish-image">
+            {% endif %}
         </li>
     {% endfor %}
     </ul>
