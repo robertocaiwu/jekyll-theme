@@ -31,32 +31,17 @@
 }
 
 /* Dark mode overrides */
-/* html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(odd) {
-  background-color: #2a2a2a;  
+html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(odd) {
+  background-color: #2a2a2a;   /* dark gray highlight */
 }
 html[data-mode="dark"] .menu-category ul li.menu-item:nth-child(even) {
-  background-color: #1c1c1c;  
-} */
+  background-color: #1c1c1c;   /* slightly darker base */
+}
 
-/* html[data-mode="dark"] .menu-item .dish-name,
+html[data-mode="dark"] .menu-item .dish-name,
 html[data-mode="dark"] .menu-item .dish-description,
 html[data-mode="dark"] .menu-item .dish-price {
-  color: #eee;          
-} */
-
-@media (prefers-color-scheme: dark) {
-  .menu-category ul li.menu-item:nth-child(odd) {
-    background-color: #2a2a2a;
-  }
-  .menu-category ul li.menu-item:nth-child(even) {
-    background-color: #1c1c1c;
-  }
-
-  .menu-item .dish-name,
-  .menu-item .dish-description,
-  .menu-item .dish-price {
-    color: #eee;
-  }
+  color: #eee;                 /* lighter text for readability */
 }
 
 
